@@ -1,0 +1,51 @@
+{
+  "name": "dsh-svg",
+  "version": "0.1.0",
+  "description": "DSH host plugin: rasterize SVG to PNG inside the Harness (resvg / rsvg-convert / sharp) and hand the picture straight back to the model, plus a static SVG linter for the classic LLM-SVG mistakes (LaTeX residue, baseline-shift, per-character <text>, external fonts).",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "svg",
+    "render",
+    "png",
+    "resvg",
+    "diagram"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "skill",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "meta": {
+    "title": "SVG 渲染 / 体检",
+    "description": "svg_render 把 SVG 栅格化成 PNG 并把图直接交给模型（画完能看见）；svg_check 静态体检并自动修复常见坑。"
+  },
+  "icon": "./icon.svg",
+  "engines": {
+    "node": ">=22.19"
+  },
+  "optionalDependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  },
+  "scripts": {
+    "test": "node --test \"tests/*.test.mjs\""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@resvg/resvg-wasm": "^2.6.2"
+  }
+}

@@ -1,0 +1,15 @@
+# ============================================================================
+# dsh-svg —— DSH bundle 挂载声明
+# ============================================================================
+# 把 dsh-svg 插入当前 profile 的配置树。安装由 plugin_manager 的
+# install_bundle 完成（它会处理 profile 的 package.json 与 cordis.patch.yml）：
+#
+#   plugin_manager  action: install_bundle
+#                   target: <这个目录的绝对路径>
+#
+# 装完新工具 svg_render / svg_check 会在下一次组装提示词时出现。
+# ============================================================================
+
+- insert:
+    - id: dsh-svg
+      name: dsh-svg

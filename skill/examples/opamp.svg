@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="460" viewBox="0 0 640 460" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+  <rect width="640" height="460" fill="#ffffff"/>
+
+  <text x="40" y="42" font-size="22" font-weight="700" fill="#0f172a">同相比例运算电路（正确写法示例）</text>
+
+  <!-- 运放：顶点朝右；反相端 y=197，同相端 y=323 -->
+  <polygon points="300,150 300,370 520,260" fill="#ffffff" stroke="#111111" stroke-width="3"/>
+  <text x="322" y="212" font-size="30" fill="#111111">−</text>
+  <text x="322" y="330" font-size="30" fill="#111111">+</text>
+  <text x="430" y="270" font-size="24" fill="#333333">A</text>
+
+  <!-- R1：反相端到地 -->
+  <rect x="150" y="180" width="110" height="34" fill="#ffffff" stroke="#111111" stroke-width="3"/>
+  <line x1="80" y1="197" x2="150" y2="197" stroke="#111111" stroke-width="3"/>
+  <line x1="260" y1="197" x2="300" y2="197" stroke="#111111" stroke-width="3"/>
+  <line x1="80" y1="197" x2="80" y2="370" stroke="#111111" stroke-width="3"/>
+  <line x1="50" y1="370" x2="110" y2="370" stroke="#111111" stroke-width="3"/>
+  <line x1="62" y1="383" x2="98" y2="383" stroke="#111111" stroke-width="3"/>
+  <line x1="74" y1="396" x2="86" y2="396" stroke="#111111" stroke-width="3"/>
+  <text x="96" y="168" font-size="20" fill="#111111">R<tspan dy="6" font-size="70%">1</tspan> = 66.7 kΩ</text>
+
+  <!-- Rf：反馈支路 -->
+  <rect x="330" y="90" width="120" height="34" fill="#ffffff" stroke="#111111" stroke-width="3"/>
+  <polyline points="280,197 280,107 330,107" fill="none" stroke="#111111" stroke-width="3"/>
+  <polyline points="450,107 540,107 540,260" fill="none" stroke="#111111" stroke-width="3"/>
+  <circle cx="280" cy="197" r="5" fill="#111111"/>
+  <circle cx="540" cy="260" r="5" fill="#111111"/>
+  <text x="336" y="78" font-size="22" fill="#111111">R<tspan dy="6" font-size="70%">f</tspan> = 200 kΩ</text>
+
+  <!-- 输入 / 输出端子 -->
+  <line x1="120" y1="323" x2="300" y2="323" stroke="#111111" stroke-width="3"/>
+  <circle cx="120" cy="323" r="6" fill="#ffffff" stroke="#111111" stroke-width="3"/>
+  <text x="132" y="308" font-size="24" fill="#111111">v<tspan dy="7" font-size="70%">I</tspan></text>
+  <line x1="520" y1="260" x2="600" y2="260" stroke="#111111" stroke-width="3"/>
+  <circle cx="600" cy="260" r="6" fill="#ffffff" stroke="#111111" stroke-width="3"/>
+  <text x="556" y="242" font-size="24" fill="#111111">v<tspan dy="7" font-size="70%">O</tspan></text>
+
+  <text x="40" y="434" font-size="16" fill="#475569">下标用 tspan dy；一行文字一个 text；坐标落 10px 网格。</text>
+</svg>
